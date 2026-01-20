@@ -7,8 +7,10 @@ public class Main {
 //i denna context kan man registrera servlets
         var context = new org.eclipse.jetty.servlet.ServletContextHandler();
         server.setHandler(context);
-
+//att lägga till servlets
         context.addServlet(RootServlet.class, "/");
+
+        context.addServlet(WordsServlet.class, "/words");
 
         context.addServlet(HelloServlet.class, "/hello/*");
 
