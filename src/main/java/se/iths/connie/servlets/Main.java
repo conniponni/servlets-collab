@@ -12,6 +12,8 @@ public class Main {
 
         context.addServlet(HelloServlet.class, "/hello/*");
 
+        context.addServlet(QuoteServlet.class, "/quote");
+
 //starta servern
         server.start();
         server.join();
